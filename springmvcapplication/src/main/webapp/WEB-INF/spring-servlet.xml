@@ -13,7 +13,7 @@
  http://www.springframework.org/schema/mvc/spring-mvc.xsd
  ">
 	<context:component-scan
-		base-package="spri" />
+		base-package="springmvcapplication" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
