@@ -17,7 +17,7 @@ public class ProductDao {
 
 	// creat
 	@Transactional
-	public void createproduct(Product product) {
+	public void createProduct(Product product) {
 
 		this.hibernateTemplate.save(product);
 	}
