@@ -1,5 +1,7 @@
 package springmvcapplication.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +20,12 @@ public class MainController {
 
 	@Autowired
 	ProductDao productdao;
-	
-	@RequestMapping("/new")
-	public String home() {
 
+	@RequestMapping("/")
+	public String home(Model model) {
+		List<Product> products = productdao.getProducts();
+
+		model.addAttribute("products", products);
 		return "index";
 	}
 
@@ -38,7 +42,7 @@ public class MainController {
 		RedirectView redirectView = new RedirectView();
 
 		this.productdao.createProduct(product);
-		
+
 		redirectView.setUrl(request.getContextPath() + "/");
 		return redirectView;
 	}
