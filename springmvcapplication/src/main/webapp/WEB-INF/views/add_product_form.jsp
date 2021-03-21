@@ -10,7 +10,7 @@
 	<div class="container mt-5 ">
 		<form action="processform" method="post">
 
-			<h1 class="text-center">Product Registration</h1>
+			<h1 class="text-center font-weight-bold">Tech Product Registration</h1>
 			<div class="form-group">
 				<label for="productname">Product Name</label> <input type="text"
 					class="form-control" id="exampleInputEmail1"

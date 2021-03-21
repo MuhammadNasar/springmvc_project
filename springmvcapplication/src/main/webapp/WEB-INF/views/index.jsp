@@ -13,7 +13,7 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="text-center md-3">Welcome to Product App</h1>
+				<h1 class="text-center md-3 font-weight-bold">Welcome to Product App</h1>
 
 				<table class="table">
 					<thead class="thead-dark">
@@ -28,10 +28,10 @@
 					<tbody>
 					<c:forEach items="${products}" var="p">
 						<tr>
-							<th scope="row">${p.id }</th>
+							<th scope="row">TECHONLY ${p.id }</th>
 							<td>${p.name}</td>
 							<td>${p.description}</td>
-							<td>${p.price}</td>
+							<td class="font-weight-bold">&#36;${p.price}</td>
 						</tr>
 					</c:forEach>
 						
