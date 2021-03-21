@@ -11,4 +11,10 @@ public class MainController {
 		
 		return "index";
 	}
+	
+	@RequestMapping("/add-product")
+	public String addProduct() {
+		
+		return "add_product_form";
+	}
 }
