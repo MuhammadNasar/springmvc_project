@@ -19,7 +19,8 @@ public class ProductDao {
 	@Transactional
 	public void createProduct(Product product) {
 
-		this.hibernateTemplate.save(product);
+		//for update and save we use this method saveOrUpdate
+		this.hibernateTemplate.saveOrUpdate(product);
 	}
 
 	// get all products

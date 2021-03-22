@@ -47,13 +47,20 @@ public class MainController {
 		redirectView.setUrl(request.getContextPath() + "/");
 		return redirectView;
 	}
-	
+
 	@RequestMapping("/delete/{productId}")
 	public RedirectView deleteProduct(@PathVariable("productId") int productId, HttpServletRequest request) {
 		this.productdao.delelteProduct(productId);
-		
+
 		RedirectView redirectView = new RedirectView();
-		redirectView.setUrl(request.getContextPath()+ "/");
-		return redirectView ;
+		redirectView.setUrl(request.getContextPath() + "/");
+		return redirectView;
+	}
+
+	@RequestMapping("/update/{productId}")
+	public String updateForm(@PathVariable("productId") int productId, Model model) {
+		Product product = this.productdao.getProduct(productId);
+		model.addAttribute("product", product);
+		return "update_product_form";
 	}
 }

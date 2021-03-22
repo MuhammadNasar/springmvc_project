@@ -13,7 +13,8 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="text-center md-3 font-weight-bold">Welcome to Product App</h1>
+				<h1 class="text-center md-3 font-weight-bold">Welcome to
+					Product App</h1>
 
 				<table class="table">
 					<thead class="thead-dark">
@@ -26,21 +27,27 @@
 						</tr>
 					</thead>
 					<tbody>
-					<c:forEach items="${products}" var="p">
-						<tr>
-							<th scope="row">TECHONLY ${p.id }</th>
-							<td>${p.name}</td>
-							<td>${p.description}</td>
-							<td class="font-weight-bold">&#36;${p.price}</td>
-						</tr>
-					</c:forEach>
-						
+						<c:forEach items="${products}" var="p">
+							<tr>
+								<th scope="row">TECHONLY ${p.id }</th>
+								<td>${p.name}</td>
+								<td>${p.description}</td>
+								<td class="font-weight-bold">&#36;${p.price}</td>
+								<td><a href="delete/${p.id }"><i
+										class="fas fa-trash-alt text-danger"></i></a> 
+										<a
+										href="update/${p.id }"><i
+										 class="fas fa-pencil-alt text-primary"></i></a>
+							</tr>
+						</c:forEach>
+
 					</tbody>
 				</table>
 
 				<div class="container text-center">
 
-					<a href = "add-product" class="btn btn-outline-success">Add Product</a>
+					<a href="add-product" class="btn btn-outline-success">Add
+						Product</a>
 				</div>
 			</div>
 		</div>
